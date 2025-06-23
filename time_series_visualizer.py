@@ -56,8 +56,8 @@ def draw_box_plot():
     # Getting the list of month names
     list_of_months = list(pd.date_range(start='2025-01-01', 
                                         periods=12, 
-                                        freq='ME').strftime('%B'))
-    df_box['month'] = pd.Categorical(df.index.strftime('%B'), categories=list_of_months, ordered=True)
+                                        freq='ME').strftime('%b'))
+    df_box['month'] = pd.Categorical(df.index.strftime('%b'), categories=list_of_months, ordered=True)
     #df_box = df_box.pivot_table(values='views', index='year', columns='month', aggfunc='mean', observed=True)
     #print(df_box)
     
